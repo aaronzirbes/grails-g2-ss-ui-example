@@ -11,7 +11,7 @@
 // }
 
 
-grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
+grails.project.groupId = 'edu.umn.demo' // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
 grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
@@ -63,6 +63,7 @@ grails.hibernate.cache.queries = true
 environments {
     development {
         grails.logging.jul.usebridge = true
+		grails.mail.port = com.icegreen.greenmail.util.ServerSetupTest.SMTP.port
     }
     production {
         grails.logging.jul.usebridge = false
@@ -91,3 +92,8 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'edu.umn.demo.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'edu.umn.demo.UserRole'
+grails.plugins.springsecurity.authority.className = 'edu.umn.demo.Role'

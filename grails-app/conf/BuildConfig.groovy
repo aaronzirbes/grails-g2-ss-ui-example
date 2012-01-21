@@ -40,6 +40,14 @@ grails.project.dependency.resolution = {
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.7.1"
         runtime ":resources:1.1.5"
+		runtime ":greenmail:1.3.1"
+		runtime ':famfamfam:1.0'
+		runtime ':jquery:1.4.2.5'
+		runtime ':jquery-ui:1.8.2.3'
+		runtime ':resources:1.1.5'
+		runtime ':spring-security-acl:1.1'
+		runtime ':spring-security-core:1.2.7.1'
+
 
         build ":tomcat:$grailsVersion"
     }
